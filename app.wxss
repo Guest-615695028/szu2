@@ -1,0 +1,109 @@
+button {
+	display: flex;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+input,
+textarea,
+.input {
+	background-color: #eeeeee;
+	border: gray 1rpx solid;
+	border-radius: 10rpx;
+	flex-grow: 1;
+}
+
+textarea {
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.avatar {
+	width: 5rem;
+	height: 5rem;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nopadding {
+	padding: 0
+}
+
+.noflex {
+	flex-grow: 0;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.right {
+	text-align: right;
+}
+
+.title {
+	background-color: #83045c;
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.small {
+	font-size: smaller
+}
+
+.large {
+	font-size: larger
+}
+
+.gray {
+	color: gray;
+}
+.red {
+	color: red;
+}
+
+.bordered {
+	border: gray 1rpx solid;
+	border-radius: 10rpx;
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.box {
+	border: 1ch outset #83045c;
+	background-color: goldenrod;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 5rpx;
+}
+
+.box-pressed {
+	border: 1ch inset #83045c;
+	background-color: darkgoldenrod;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 5rpx;
+}
+
+.item {
+	flex-grow: 1;
+	justify-content: center
+}
+
+icon {
+	vertical-align: middle;
+}

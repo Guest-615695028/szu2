@@ -1,0 +1,97 @@
+{
+  "pages": [
+    "pages/welcome",
+    "pages/login",
+    "pages/register",
+    "pages/forgot",
+    "pages/tabbar/home",
+    "pages/tabbar/cart",
+    "pages/tabbar/talk",
+    "pages/tabbar/my"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "onReachBottomDistance": 10,
+  "window": {
+    "navigationBarBackgroundColor": "#83045c",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "深大校园二手交易平台",
+    "backgroundColor": "#83045c",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/home",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home(1).png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/tabbar/cart",
+        "iconPath": "icons/shopping-cart.png",
+        "selectedIconPath": "icons/shopping-cart(1).png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/tabbar/talk",
+        "iconPath": "icons/comment.png",
+        "selectedIconPath": "icons/comment(1).png",
+        "text": "讨论"
+      },
+      {
+        "pagePath": "pages/tabbar/my",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user(1).png",
+        "text": "我的"
+      }
+    ]
+  },
+  "subpackages": [
+    {
+      "root": "commodity",
+      "pages": [
+        "pages/commodity",
+        "pages/edit"
+      ]
+    },
+    {
+      "root": "errors",
+      "pages": [
+        "pages/403",
+        "pages/404",
+        "pages/500"
+      ]
+    },
+    {
+      "root": "home",
+      "pages": [
+        "pages/add",
+        "pages/camera",
+        "pages/search"
+      ]
+    },
+    {
+      "root": "my",
+      "pages": [
+        "pages/account",
+        "pages/exchange",
+        "pages/favorites",
+        "pages/history",
+        "pages/mygoods",
+        "pages/report"
+      ]
+    },
+    {
+      "root": "talk",
+      "pages": [
+        "pages/notify",
+        "pages/activity",
+        "pages/service"
+      ]
+    }
+  ]
+}

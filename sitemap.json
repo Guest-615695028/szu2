@@ -1,0 +1,9 @@
+{
+	"desc": "More information on http://developers.weixin.qq.com/",
+	"rules": [
+		{
+			"action": "allow",
+			"page": "*"
+		}
+	]
+}

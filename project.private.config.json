@@ -1,0 +1,10 @@
+{
+	"description": "Details in http://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+	"setting": {
+		"compileHotReLoad": true,
+		"autoAudits": false,
+		"urlCheck": false
+	},
+	"libVersion": "3.3.4",
+	"projectname": "szu2"
+}

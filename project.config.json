@@ -1,0 +1,34 @@
+{
+	"compileType": "miniprogram",
+	"setting": {
+		"packNpmRelationList": [],
+		"ignoreUploadUnusedFiles": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"autoAudits": false,
+		"compileHotReLoad": true,
+		"es6": true,
+		"enhance": true,
+		"minified": true,
+		"minifyWXSS": true,
+		"minifyWXML": true,
+		"postcss": true,
+		"uglifyFileName": true,
+		"coverView": false,
+		"showShadowRootInWxmlPanel": false,
+		"condition": false
+	},
+	"condition": {},
+	"editorSetting": {
+		"tabIndent": "tab",
+		"tabSize": 4
+	},
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"appid": "wx021c8a417ce29008"
+}
