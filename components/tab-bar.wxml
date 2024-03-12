@@ -1,0 +1,5 @@
+<!--components/dialog.wxml-->
+<view style="height: {{height}}px; width:{{width}}px;"></view>
+<view class="dialog" style="padding: 0px env(safe-area-inset-right) {{safe?'env(safe-area-inset-bottom)':''}}env(safe-area-inset-left);">
+	<slot></slot>
+</view>

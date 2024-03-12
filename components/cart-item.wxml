@@ -1,0 +1,28 @@
+<!--components/cart-wxml-->
+<view class="input" wx:if="{{gid>0 && price>0}}">
+	<view class="{{noflex?'':'flex'}}" style="line-height: 1; text-align: center; margin: 1em;">
+		<image src="{{image}}" style="{{imgstyle}}" mode="aspectFit" catchtap="tap" />
+		<view style="flex-grow: 1; text-align: justify;">
+			<view>{{name}}</view>
+			<view class="gray">{{item[desc]}}</view>
+			<view class="gray" wx:if="{{price}}">¥{{price}}</view>
+		</view>
+		<view>
+			<view class="red" wx:if="{{mode=='delete'}}" catchtap="showModal">删除\nDelete</view>
+			<view wx:elif="{{mode=='edit'}}" catchtap="edit">编辑\nEdit</view>
+			<view wx:elif="{{mode=='add'}}">添加\nAdd</view>
+			<view class="number" bindtap="showModal" wx:elif="{{mode=='number'}}">
+				<text>\n{{number}}\n\n</text>
+			</view>
+		</view>
+	</view>
+	<mask bindexit="hideModal" wx:if="{{showModal}}" safe="{{safe}}">
+		<view wx:if="{{mode=='number'}}">
+			{{name}}
+			<slider max="{{max}}" bindchange="adjust" value="{{number}}" show-value></slider>
+		</view>
+		<view class="red" style="text-align:center" wx:elif="{{mode=='delete'}}" bindtap="delete">
+			确认删除\nConfirm deletion
+		</view>
+	</mask>
+</view>

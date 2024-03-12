@@ -1,0 +1,76 @@
+/* talk/pages/service.wxss */
+:root {
+	--a: 
+}
+button {
+	width: 4rem;
+}
+
+.bubble {
+	min-width: 320rpx;
+	min-height: 3rem;
+	align-self: center;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 0.5rem;
+	position: relative;
+	z-index: 3;
+}
+
+.bubble::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	right: -1rem;
+	top: 1rem;
+	width: 0;
+	height: 0;
+	border: 0.5rem solid;
+	border-color: transparent transparent transparent lightgrey ;
+}
+
+.bubble::after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	right: calc(-1rem + 1px);
+	top: 1rem;
+	width: 0;
+	height: 0;
+	border: 0.5rem solid;
+	border-color: transparent transparent transparent white ;
+}
+.lbubble {
+	min-width: 320rpx;
+	min-height: 3rem;
+	align-self: center;
+	background: #fff;
+	border: 1px solid lightgrey;
+	border-radius: 0.5rem;
+	position: relative;
+	z-index: 3;
+}
+
+.lbubble::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	left: -1rem;
+	top: 1rem;
+	width: 0;
+	height: 0;
+	border: 0.5rem solid;
+	border-color: transparent lightgrey transparent transparent ;
+}
+
+.lbubble::after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	left: calc(-1rem + 1px);
+	top: 1rem;
+	width: 0;
+	height: 0;
+	border: 0.5rem solid;
+	border-color: transparent white transparent transparent ;
+}

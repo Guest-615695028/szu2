@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	  "tabbar": "/components/tab-bar",
+	  "my-icon": "/components/icon"
+  }
+}

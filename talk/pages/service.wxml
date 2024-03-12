@@ -1,0 +1,33 @@
+<!--talk/pages/service.wxml-->
+<view class="title">客服 Customer Service</view>
+<view class="flex" style="align-items: start" wx:for="{{messages}}" wx:key="time">
+	<block wx:if="{{item.sender}}">
+		<my-icon src="headset" size="2rem" padding="0.5rem" />
+		<view class="lbubble"><text>{{item.value}}</text></view>
+		<view style="flex-grow: 1" />
+	</block>
+	<block class="flex" style="align-items: start" wx:else>
+		<view style="flex-grow: 1" />
+		<view class="bubble"><text>{{item.value}}</text></view>
+		<my-icon src="i" size="2rem" padding="0.5rem" />
+	</block>
+</view>
+<tabbar safe>
+	<view class="flex">
+		<button type="default" bindtap="back">
+			<my-icon src="angle-left" size="1.5rem" />
+		</button>
+		<textarea auto-height placeholder="请说说您需要的帮助\nPlease express your need" value="{{value}}" style="min-height: 2.5rem;" bindinput="input"></textarea>
+		<button type="default" bindtap="memoji">
+			<my-icon src="smile" size="1.5rem" bindtap="send" />
+		</button>
+		<button type="primary" bind:tap="send" disabled="{{!value}}">
+			<my-icon src="paper-plane" size="1.5rem" invert/>
+		</button>
+	</view>
+	<swiper bindexit="uncomment" wx:if="{{memoji}}" indicator-dots vertical circular autoplay display-multiple-items="2">
+		<swiper-item item-id="{{index}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+			{{item}}
+		</swiper-item>
+	</swiper>
+</tabbar>

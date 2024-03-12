@@ -1,0 +1,10 @@
+/* components/cart-item.wxss */
+@import "/app.wxss";
+
+.number {
+	min-width: 3rem;
+	min-height: 3rem;
+	border: solid lightgrey 1rpx;
+	border-radius: 5rpx;
+	background-color: white;
+}

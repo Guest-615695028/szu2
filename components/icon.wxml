@@ -1,0 +1,4 @@
+<!--components/icon.wxml-->
+<view style="flex-basis: 0; background-color: {{color}}; border: {{edge}}; border-radius: {{radius}}; ">
+	<image src="/components/assets/icons/{{src}}.svg" style="vertical-align: middle; flex-grow: 0; height: {{size}}; width: {{size}}; padding: {{padding}}; filter: {{invert?'invert(1);':'none'}}" mode="aspectFit" />
+</view>

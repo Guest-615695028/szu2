@@ -1,0 +1,7 @@
+/* pages/commodity/commodity.wxss */
+.a {
+	border-bottom: #83045c 1px solid; width: 100%;
+}
+.b {
+	border-bottom: #83045c 1px dashed; width: 100%;
+}

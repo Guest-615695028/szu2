@@ -1,0 +1,53 @@
+<!--pages/commodity/commodity.wxml-->
+<image src="{{image}}" style="width: 750rpx;" mode="widthFix"></image>
+<view style="text-align: center;">{{name}}</view>
+<view class="flex">
+	<view class="small gray item" style="height: 2rem;">
+		ID：{{id}} 库存{{max}}件 卖家：{{seller}}
+	</view>
+	<view style="font-weight: bold; font-size: 2rem">¥{{price}}</view>
+</view>
+<view class="b gray">{{description}}</view>
+<view class="a">评价 Comments ({{comments.length}})</view>
+<view class="flex a" wx:for="{{comments}}" wx:key="time">
+	<image src="{{item.avatar}}" style="width: 3rem; height: 3rem" mode="aspectFill"></image>
+	<view>
+		<view class="gray small">{{item.date}} {{item.username}}</view>
+		<view>{{item.text}}</view>
+	</view>
+</view>
+<tabbar safe>
+	<mask wx:if="{{commenting==1}}" bindexit="uncomment">
+		<form bindsubmit="uncomment">
+			<textarea focus style="width: 100%;" placeholder="留言 Leave a Message..." name="question" />
+			<button type="primary" form-type="submit">
+				<my-icon src="check" size="1.5rem" invert/>
+			</button>
+		</form>
+	</mask>
+	<mask wx:elif="{{commenting==2}}" bindexit="addToCart">
+		<form bindsubmit="addToCart">
+			商品数量 Number of Goods
+			<slider show-value min="1" max="{{max}}" value="1" block-color="#83045c" name="num"></slider>
+			<button type="primary" form-type="submit">
+				<my-icon src="check" size="1.5rem" invert/>
+			</button>
+		</form>
+	</mask>
+	<view class="flex" wx:else>
+		<button type="warn" catchtap="comment" data-type="{{4}}">
+			<my-icon src="triangle-warning" size="1.5rem" invert/>
+		</button>
+		<button type="default" catchtap="comment" data-type="{{1}}">
+			<my-icon src="comment" size="1.5rem"/></button>
+		<button type="default" catchtap="addToFavorites">
+			<my-icon src="star" size="1.5rem" />
+		</button>
+		<button type="default" catchtap="comment" data-type="{{2}}">
+			<my-icon src="shopping-cart-add" size="1.5rem" />
+		</button>
+		<button type="primary" catchtap="comment" data-type="{{3}}">
+			<my-icon src="check" size="1.5rem" invert/>
+		</button>
+	</view>
+</tabbar>

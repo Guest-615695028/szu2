@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"tabbar": "/components/tab-bar",
+		"mask": "/components/mask",
+		"my-icon": "/components/icon"
+	}
+}

@@ -1,0 +1,5 @@
+<!--components/mask.wxml-->
+<view class="mask" bindtap="exit"></view>
+<view class="dialog" style="padding: 10px 10px {{safe?'calc(2*env(safe-area-inset-bottom) + 10px)':''}};">
+	<slot></slot>
+</view>
