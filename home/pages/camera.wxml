@@ -1,0 +1,5 @@
+<!--home/pages/camera.wxml-->
+<view class="title">拍照识别商品 Capture your desired goods</view>
+<camera style="height: 1350rpx" binderror="cameraError"></camera>
+<button type="primary" bindtap="takePhoto">拍照 Capture</button>
+<image mode="widthFix" src="{{src}}"></image>

@@ -1,0 +1,6 @@
+<!--pages/tabbar/cart.wxml-->
+<view style="border-bottom: #861F41 solid 1px;">购物车 Cart({{goods.length}})</view>
+<view wx:for="{{goods}}" wx:key="id">
+	<item id="{{index}}" wx:if="{{item}}" gid="{{item.GID}}" number="{{item.Num}}" mode="number" bind:adjust="adjust"/>
+</view>
+<view>总价：¥{{totalPrice}}</view>

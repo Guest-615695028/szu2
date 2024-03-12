@@ -1,0 +1,29 @@
+/* pages/tabbar/cart.wxss */
+
+
+.modal-mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.5;
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.modal-dialog {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 0;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 9999999;
+	background-color: #fff;
+	border-radius: 5rpx;
+}

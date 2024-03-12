@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+		"item": "/components/cart-item",
+		"my-icon": "/components/icon"
+	},
+	"enablePullDownRefresh": true
+}

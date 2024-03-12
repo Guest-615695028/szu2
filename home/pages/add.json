@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	  "mask": "/components/mask",
+	  "my-icon": "/components/icon"
+  }
+}

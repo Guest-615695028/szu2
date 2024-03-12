@@ -1,0 +1,8 @@
+/* home/pages/add.wxss */
+.flex {
+  border-bottom: 1px gray solid;
+}
+
+.content {
+  color: #83045c;
+}

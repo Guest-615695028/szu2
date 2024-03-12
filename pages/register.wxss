@@ -1,0 +1,4 @@
+/* pages/register.wxss */
+.true {
+	color: #83045c;
+}

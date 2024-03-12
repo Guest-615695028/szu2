@@ -1,0 +1,5 @@
+<!--my/pages/mygoods.wxml-->
+<text style="text-align: center; width: 100%">我的商品 My Goods ({{arr.length}})</text>
+<view wx:for="{{arr}}">
+	<item gid="{{item}}" mode="edit" safe/>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/my/favorites.wxml-->
+<text style="text-align: center; width: 100%">收藏 Favorites ({{goods.length}})</text>
+<view wx:for="{{goods}}">
+	<item id="{{item}}" mode="delete" safe binddelete="delete"></item>
+</view>

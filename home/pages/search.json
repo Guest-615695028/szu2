@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	  "my-icon": "/components/icon",
+	  "item": "/components/cart-item"
+  }
+}

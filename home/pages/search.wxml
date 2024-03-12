@@ -1,0 +1,11 @@
+<!--home/pages/search.wxml-->
+<view class="flex" style="border: gray 1rpx solid; border-radius: 10rpx;">
+	<my-icon src="search" size="40rpx" padding="10rpx" />
+	<input style="border: none; background-color: inherit; height: 40px" placeholder="搜索 Search" bindconfirm="confirm"></input>
+</view>
+<grid-view type="masonry" wx:if="{{gid}}">
+	<view wx:for="{{gid}}">
+		<item noflex gid="{{item}}" imgstyle="width: 300rpx; height: 200rpx;"></item>
+	</view>
+</grid-view>
+<view wx:else><view class="gray">请用空格分开关键字。</view></view>

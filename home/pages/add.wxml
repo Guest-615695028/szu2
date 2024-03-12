@@ -1,0 +1,17 @@
+<!--home/pages/add.wxml-->
+<view class="title">发布商品 Post your goods</view>
+<form bindsubmit="publish">
+	<view class="flex" wx:for="{{headers}}">
+		<view style="flex-basis: {{index<3?1:3}}00px; flex-grow:1">{{item}}</view>
+		<input style="flex-grow:1; width: 100rpx；" data-n="contents[{{index}}]" type="{{type[index]}}" confirm-type="next" name="{{index}}" />
+	</view>
+	<view class="flex">
+		<my-icon src="camera-viewfinder" size="100rpx" padding="20rpx" edge="1rpx solid gray" radius="10rpx" bindtap="camera">
+		</my-icon>
+		<button type="primary" form-type="submit" style="width: 100%; height: 142rpx; white-space: nowrap;">
+			发布\nPublish
+		</button>
+	</view>
+</form>
+<image src="{{tempFilePath}}" mode="widthFix" style="width: 750rpx;" />
+<view class="red">{{errMsg}}</view>

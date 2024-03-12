@@ -1,0 +1,4 @@
+/* pages/welcome.wxss */
+page {
+    background-color: #83045c;
+}

@@ -1,0 +1,4 @@
+/* pages/403.wxss */
+page {
+    background-color: #83045c;
+}

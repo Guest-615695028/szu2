@@ -1,0 +1,9 @@
+<!--pages/forgot.wxml-->
+<view class="title">忘记密码 Forgot Password?</view>
+<form bindsubmit="submit" bindreset="reset">
+	<text>学号 Student ID</text>
+	<input type="number" maxlength="10" placeholder="Required" name="user" confirm-type="done" bindconfirm="submit" />
+	<button style="width: 100%" type="primary" form-type="submit">确认 Confirm</button>
+	<button style="width: 100%" type="default" form-type="reset">重置 Reset</button>
+	<button style="width: 100%" type="warn" bindtap="cancel">取消 Cancel</button>
+</form>

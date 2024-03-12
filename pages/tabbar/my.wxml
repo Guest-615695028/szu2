@@ -1,0 +1,10 @@
+<!--pages/tabbar/my.wxml-->
+<view class="box" style="height: 5em;" data-page="account" bindtap="tap">
+	<text class="item">账户 Account</text>
+	<image src="{{avatar}}" class="avatar" mode="aspectFit"> </image>
+	<my-icon src="angle-right" size="1em"> </my-icon>
+</view>
+<view class="box" wx:for="{{a}}" data-page="{{item.bindtap}}" bindtap="tap">
+	<text class="item">{{item.text}}</text>
+	<my-icon src="angle-right" size="1em"> </my-icon>
+</view>

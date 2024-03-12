@@ -1,0 +1,21 @@
+<!--my/pages/report.wxml-->
+<view class="title">举报 Report</view>
+<view class="box">选择商品 Select a commodity</view>
+<view class="flex" style="line-height: 1; text-align: center; margin: 1em;" wx:if="{{gid}}">
+	<image src="http://localhost:1102/image?type=goods&id={{gid}}" style="width: 180rpx; height: 120rpx;" mode="aspectFit" catchtap="tap" />
+	<view style="flex-grow: 1; text-align: justify;">
+		<view>{{name}}</view>
+		<view class="gray">{{desc}}</view>
+		<view class="gray" wx:if="{{price}}">¥{{price}}</view>
+	</view>
+</view>
+<view class="box">说明理由 Explain the violation</view>
+<form bindsubmit="submit" bindreset="reset">
+	<radio-group>
+		<view wx:for="{{a}}">
+			<radio value="{{index}}">
+				<text style="flex-basis: 0; flex-grow: 0;">{{item}}</text>
+			</radio>
+		</view>
+	</radio-group>
+</form>

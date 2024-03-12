@@ -1,0 +1,8 @@
+<!--pages/welcome.wxml-->
+<image style="width: 100%;" mode="widthFix" src="http://localhost:1102/image?type=welcome.png"></image>
+<view class="title">欢迎来到深大校园二手交易平台！</view>
+<view class="title">Welcome to the Second-hand Exchange Platform of Shenzhen University!</view>
+<grid-view cross-axis-count="2">
+  <button type="primary" style="width: 150px;" bindtap="login">登录 Login</button>
+  <button type="default" style="width: 150px;" bindtap="register">注册 Register</button>
+</grid-view>

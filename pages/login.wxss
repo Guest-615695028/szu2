@@ -1,0 +1,14 @@
+/* pages/login.wxss */
+.input {
+	background-color: #eeeeee;
+	border-color: #808080;
+}
+
+.text {
+	background-color: white;
+}
+
+.warn {
+  color: red;
+  text-align: right;
+}

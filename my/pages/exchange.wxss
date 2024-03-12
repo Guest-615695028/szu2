@@ -1,0 +1,7 @@
+/* pages/my/exchange.wxss */
+.false{
+	text-align:center; color:#861F41; border-bottom: 2rpx solid #861F41; margin-bottom: 10rpx;
+}
+.true{
+	text-align:center; 
+}

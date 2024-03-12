@@ -1,0 +1,12 @@
+/* pages/my/account.wxss */
+.bottom {
+	border-bottom: 1px gray solid;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+.purple {
+	color: #83045c;
+}

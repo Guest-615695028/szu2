@@ -1,0 +1,2 @@
+<!--pages/tabbar/talk.wxml-->
+<view class="box" hover-class="box-pressed" bindtap="b{{index}}" wx:for="{{buttons}}">{{item}}</view>

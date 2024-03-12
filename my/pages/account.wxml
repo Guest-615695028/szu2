@@ -1,0 +1,77 @@
+<!--pages/my/account.wxml-->
+<form bindsubmit="submit" bindreset="reset">
+	<view class="flex bottom">
+		<text style="flex-grow: 1 ">头像 Avatar</text>
+		<button open-type="chooseAvatar" size="mini" bindchooseavatar="avatar">
+			<image src="{{avatar}}" class="avatar input" mode="aspectFill"></image>
+			<image src="/components/assets/icons/angle-right.svg" class="avatar" style="width: 1em;" mode="aspectFit" />
+		</button>
+	</view>
+	<view wx:for="{{p}}" wx:key="name">
+		<view class="bottom" style="color: black;">{{item.name}}</view>
+		<view class="bottom purple" bindtap="tap" data-n="{{index}}">
+			<view wx:if="{{values[index]}}">{{values[index]}}</view>
+			<view style="color:#83045ccc; text-align: end; width:100%" wx:else>(添加... Add...)</view>
+		</view>
+	</view>
+	<mask wx:if="{{m}}" bindexit="exit">
+		<form bindsubmit="enter">
+			<text>{{p[m].name}}</text>
+			<input value="{{values[m]}}" name="name" type="{{p[m].type}}" disabled="{{m==1}}" maxlength="{{p[m].max?p[m].max:-1}}" bindconfirm="enter"></input>
+			<button type="primary" disabled wx:if="{{m=='SID' && values.Verified}}">不允许修改 Non-Modifiable</button>
+			<button type="primary" formType="submit" wx:elif="{{m=='SID'||m=='Phone'||m=='Mail'}}">验证 Verify</button>
+			<button type="primary" formType="submit" wx:else>确认 Confirm</button>
+		</form>
+	</mask>
+	<view class="flex bottom">
+		<text class="grow">生日 Birthday</text>
+		<picker class="purple" mode="date" value="{{birthday}}" start="1970-1-1" end="today" bindchange="changeBirthday" name="birth">{{birthday}}</picker>
+	</view>
+	<view class="flex bottom">
+		<text class="grow">年龄 Age</text>
+		<text class="purple">{{age}}</text>
+	</view>
+	<view class="flex bottom">
+		<text class="grow">性别 Gender</text>
+		<radio-group name="gender" bindchange="changeGender">
+			<label wx:for="{{genders}}" wx:key="*this">
+				<radio value="{{index}}" checked="{{index==values.Gender}}" />{{item}}
+			</label>
+		</radio-group>
+	</view>
+	<view class="bottom">
+		<view class="flex">
+			<text class="grow">收货地址 Recipient Address</text>
+			<button data-n="{{-3}}" size="mini" bindtap="tap">添加 Add</button>
+		</view>
+		<view style="margin-inline: 10px;" wx:for="{{recv}}" wx:key="*this">
+			{{item}}<icon type="cancel" data-index="{{index}}" bindtap="addAddress"></icon>
+		</view>
+	</view>
+	<mask data-add="{{0}}" safe bindexit="exit" wx-if="{{m == -3}}">
+		<view>添加收货地址 Add Recipient Address</view>
+		<form data-index="{{-1}}" bindsubmit="addAddress">
+			<view style="padding: 10rpx 0rpx">
+				External 外部
+				<switch bindchange="switching" />
+				内部 Internal
+			</view>
+			<picker class="input" mode="selector" range="{{campuses}}" wx:if="{{value}}" name="region" bindchange="changeRegion">{{campuses[region]?campuses[region]:"校区 Campus"}}</picker>
+			<picker class="input" mode="region" value="{{['广东省','深圳市','南山区']}}" name="region" bindchange="changeRegion" wx:else>{{region?region:"省市区 Region"}}</picker>
+			<input placeholder="收货地址 Recipient Address" name="addr"></input>
+			<button style="width: 100%" type="primary" form-type="submit">确认 Confirm</button>
+		</form>
+	</mask>
+	<button data-n="{{-2}}" bindtap="tap">修改密码 Modify Password</button>
+	<mask wx:if="{{m == -2}}" bindexit="exit">
+		<form bindsubmit="changePassword" bindreset="reset">
+			<block wx:for="{{password}}">
+				<text>{{item.zh}}</text>
+				<input password type="safe-password" placeholder="{{item.en}} Password" maxlength="30" name="{{index}}" confirm-type="{{item.type}}" />
+			</block>
+			<button type="primary" formType="submit">确认 Confirm</button>
+			<button type="default" formType="reset">重置 Reset</button>
+		</form>
+	</mask>
+	<button type="warn" catchtap="deleteAccount">注销账户 Delete Account</button>
+</form>

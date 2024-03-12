@@ -1,0 +1,13 @@
+<!--pages/login.wxml-->
+<view class="title">登录 Login</view>
+<form bindsubmit="submit" bindreset="reset">
+  <text>学号 Student ID</text>
+  <input type="number" maxlength="10" placeholder="Required" name="user" confirm-type="next" />
+  <text>密码 Password</text>
+  <input password placeholder="Required" name="pwd" confirm-type="done" bindconfirm="submit"/>
+  <view style="color:blue;" bindtap="forgot">忘记密码 Forgot Password?</view>
+  <grid-view cross-axis-count="3">
+  <button style="width: 100%" size="mini" type="primary" form-type="submit">登录 Login</button>
+  <button style="width: 100%" size="mini" type="default" form-type="reset">重置 Reset</button>
+  <button style="width: 100%" size="mini" type="warn" bindtap="cancel">取消 Cancel</button></grid-view>
+</form>

@@ -1,0 +1,16 @@
+<!--pages/my/exchange.wxml-->
+<text>交易记录 Exchange History</text>
+<grid-view type="aligned" cross-axis-count="2">
+	<view class="{{mode}}" bindtap="sold">卖出 Sold ({{recordSold.length}})</view>
+	<view class="{{!mode}}" bindtap="bought">买入 Bought ({{recordBought.length}})</view>
+</grid-view>
+<block wx:if="{{mode}}">
+	<view wx:for="{{recordBought}}">
+		<item gid="{{item}}" safe mode="delete" binddelete="delete" desc="seller"></item>
+	</view>
+</block>
+<block wx:else>
+	<view wx:for="{{recordSold}}">
+		<item gid="{{item}}" safe mode="delete" binddelete="delete" desc="buyer"></item>
+	</view>
+</block>

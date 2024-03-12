@@ -1,0 +1,21 @@
+<!--pages/home.wxml-->
+<view class="title">
+	<image style="width: 100%;" mode="widthFix" src="http://localhost:1102/image?type=welcome.png" />
+	<view>欢迎来到深大校园二手交易平台！</view>
+	<view>Welcome to the Second-hand Exchange Platform of Shenzhen University!</view>
+</view>
+<view class="flex">
+	<view class="flex" style="flex-grow: 1; border: gray 1rpx solid; border-radius: 10rpx;" bind:tap="search">
+		<my-icon src="search" size="40rpx" padding="10rpx" />
+		<text>搜索 Search</text>
+	</view>
+	<my-icon wx:for="{{['camera', 'add']}}" edge="1px solid gray" radius="10rpx" src="{{item}}" size="40rpx" padding="10rpx" bind:tap="{{item}}" />
+</view>
+<grid-view type="masonry">
+	<view wx:for="{{gid}}">
+		<item noflex gid="{{item}}" imgstyle="width: 300rpx; height: 200rpx;"></item>
+	</view>
+</grid-view>
+<view style="min-height: 300rpx; text-align: center" wx:if="{{reachedBottom}}">
+	<image src="/animations/Fading circles.gif" style="width:64rpx; height:22rpx" mode="aspectFit"></image>
+</view>
